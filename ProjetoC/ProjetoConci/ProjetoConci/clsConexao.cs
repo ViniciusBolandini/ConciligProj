@@ -216,5 +216,38 @@ namespace ProjetoConci
             return -1;
         }
 
+        // Método para importar tabela
+        public bool ImportarTabela(string caminho)
+        {
+            bool result = false;
+
+            AbrirConexao();
+
+            // comando Sql
+            string consultaSql = $"BULK INSERT IMPORT FROM '{caminho}' WITH (FIELDTERMINATOR = ';',FIRSTROW = 2,CODEPAGE = 'ACP');" 
+                + $"INSERT INTO GERAL (NOME,CPF,CONTRATO,PRODUTO,VENCIMENTO,VALOR,NOME_ARQUIVO,USUARIO_IMP) SELECT NOME, CPF, CAST(CONTRATO AS INT), PRODUTO, CONVERT(DATE,VENCIMENTO,103), CAST(REPLACE(VALOR,',','.') AS MONEY), 'ARQ', 1 FROM IMPORT;" 
+                + $"DELETE IMPORT;";
+
+            // objeto que recebe o comando e a conexao
+            SqlCommand comando = new SqlCommand(consultaSql, conexao);
+
+
+            int linhasAfetadas = comando.ExecuteNonQuery();
+
+            // Verificaçao
+            if (linhasAfetadas > 0)
+            {
+                Console.WriteLine("Dados inseridos com sucesso.");
+                result = true;
+            }
+            else
+            {
+                Console.WriteLine("Falha ao inserir dados.");
+            }
+
+            FecharConexao();
+            return result;
+        }
+
     }
 }

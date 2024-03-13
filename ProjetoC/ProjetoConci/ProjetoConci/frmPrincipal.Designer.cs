@@ -28,12 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnEscolherArquivo = new System.Windows.Forms.Button();
+            this.txtCaminho = new System.Windows.Forms.TextBox();
+            this.btnImportar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnEscolherArquivo
+            // 
+            this.btnEscolherArquivo.Location = new System.Drawing.Point(30, 22);
+            this.btnEscolherArquivo.Name = "btnEscolherArquivo";
+            this.btnEscolherArquivo.Size = new System.Drawing.Size(139, 23);
+            this.btnEscolherArquivo.TabIndex = 0;
+            this.btnEscolherArquivo.Text = "Escolher Arquivo";
+            this.btnEscolherArquivo.UseVisualStyleBackColor = true;
+            this.btnEscolherArquivo.Click += new System.EventHandler(this.btnEscolherArquivo_Click);
+            // 
+            // txtCaminho
+            // 
+            this.txtCaminho.Location = new System.Drawing.Point(188, 25);
+            this.txtCaminho.Name = "txtCaminho";
+            this.txtCaminho.Size = new System.Drawing.Size(456, 20);
+            this.txtCaminho.TabIndex = 1;
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.Location = new System.Drawing.Point(650, 21);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(138, 23);
+            this.btnImportar.TabIndex = 2;
+            this.btnImportar.Text = "Importar Arquivo";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
+            // 
+            // frmPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnImportar);
+            this.Controls.Add(this.txtCaminho);
+            this.Controls.Add(this.btnEscolherArquivo);
+            this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnEscolherArquivo;
+        private System.Windows.Forms.TextBox txtCaminho;
+        private System.Windows.Forms.Button btnImportar;
     }
 }

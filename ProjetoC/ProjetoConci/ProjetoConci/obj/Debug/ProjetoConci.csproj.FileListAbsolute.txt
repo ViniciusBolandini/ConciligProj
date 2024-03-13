@@ -9,3 +9,4 @@ C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\Proj
 C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.exe
 C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.pdb
 C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.frmCadastro.resources
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.frmPrincipal.resources
