@@ -7,19 +7,19 @@
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\projetoconci\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\projetoconci\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\projetoconci\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\projetoconci\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,8 +42,7 @@
               "RelativeToolTip": "ProjetoConci\\frmCadastro.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAArwCoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T15:56:20.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-13T15:56:20.95Z"
             },
             {
               "$type": "Document",
@@ -54,8 +53,7 @@
               "ToolTip": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\frmCadastro.cs [Design]",
               "RelativeToolTip": "ProjetoConci\\frmCadastro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T15:54:40.919Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-13T15:54:40.919Z"
             },
             {
               "$type": "Document",
@@ -67,8 +65,7 @@
               "RelativeToolTip": "ProjetoConci\\clsConexao.cs",
               "ViewState": "AQIAALEAAAAAAAAAAADwv9cAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T15:08:19.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-13T15:08:19.52Z"
             },
             {
               "$type": "Document",
@@ -78,7 +75,7 @@
               "RelativeDocumentMoniker": "ProjetoConci\\frmLogin.cs",
               "ToolTip": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\frmLogin.cs",
               "RelativeToolTip": "ProjetoConci\\frmLogin.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCQAAAAQAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAowD0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-13T14:37:27.655Z",
               "EditorCaption": ""
@@ -92,8 +89,7 @@
               "ToolTip": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\frmLogin.cs [Design]",
               "RelativeToolTip": "ProjetoConci\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:31:00.727Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-13T14:31:00.727Z"
             }
           ]
         }
