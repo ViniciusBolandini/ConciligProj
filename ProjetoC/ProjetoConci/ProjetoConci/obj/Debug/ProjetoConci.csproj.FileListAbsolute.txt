@@ -1,0 +1,11 @@
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\bin\Debug\ProjetoConci.exe.config
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\bin\Debug\ProjetoConci.exe
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\bin\Debug\ProjetoConci.pdb
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.csproj.AssemblyReference.cache
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.frmLogin.resources
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.Properties.Resources.resources
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.csproj.GenerateResource.cache
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.csproj.CoreCompileInputs.cache
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.exe
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.pdb
+C:\Users\vinicius\Documents\ProjConcilig\ConciligProj\ProjetoC\ProjetoConci\ProjetoConci\obj\Debug\ProjetoConci.frmCadastro.resources
