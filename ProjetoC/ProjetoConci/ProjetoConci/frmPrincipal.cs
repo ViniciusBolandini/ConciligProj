@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProjetoConci
 {
@@ -44,6 +46,15 @@ namespace ProjetoConci
             clsConexao conexao = new clsConexao();
             conexao.ImportarTabela(txtCaminho.Text);
             
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            clsConexao conexao = new clsConexao();
+
+            string consultaSql = "SELECT * FROM GERAL;";
+
+            grdGeral.DataSource = conexao.BuscaDados(consultaSql);
         }
     }
 }

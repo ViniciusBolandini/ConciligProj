@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace ProjetoConci
 {
@@ -247,6 +248,30 @@ namespace ProjetoConci
 
             FecharConexao();
             return result;
+        }
+
+        public DataTable BuscaDados(string sql)
+        {
+            var dataTable = new DataTable();
+
+            AbrirConexao();
+
+
+            // recebe o comando Sql
+            string consultaSql = sql;
+
+            // objeto que recebe o comando e a conexao
+            SqlCommand comando = new SqlCommand(consultaSql, conexao);
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+
+            adaptador.Fill(dataTable);
+
+
+            FecharConexao(); // Fecha a conexão
+
+            return dataTable;
+            
         }
 
     }
