@@ -28,8 +28,9 @@ namespace ProjetoConci
             if (resulte)
             {
                 int usuarioId = conexao.PegarID(txtNome.Text, txtSenha.Text);
+                string nomeUsuario = txtNome.Text;
 
-                frmPrincipal frmPrincipal = new frmPrincipal();
+                frmPrincipal frmPrincipal = new frmPrincipal(nomeUsuario);
 
                 frmPrincipal.ShowDialog();
                 this.Close();

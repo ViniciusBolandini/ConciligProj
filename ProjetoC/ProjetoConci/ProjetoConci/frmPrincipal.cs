@@ -14,8 +14,10 @@ namespace ProjetoConci
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
+         public string nomeDoUsuario;
+        public frmPrincipal(string nomeUsuario)
         {
+            nomeDoUsuario = nomeUsuario;
             InitializeComponent();
         }
 
@@ -44,17 +46,78 @@ namespace ProjetoConci
         private void btnImportar_Click(object sender, EventArgs e)
         {
             clsConexao conexao = new clsConexao();
-            conexao.ImportarTabela(txtCaminho.Text);
-            
+            if (string.IsNullOrWhiteSpace(txtCaminho.Text))
+            {
+                MessageBox.Show("escolha um arquivo");
+            }
+            else
+            {
+                Console.WriteLine("entrou so else");
+                conexao.ImportarTabela(txtCaminho.Text, nomeDoUsuario);
+            }
+
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             clsConexao conexao = new clsConexao();
 
-            string consultaSql = "SELECT * FROM GERAL;";
+            string consultaSql = "SELECT NOME,CPF,NOME_ARQUIVO AS ARQ, USUARIO_IMP AS [IMPORTADO POR] FROM GERAL;";
 
             grdGeral.DataSource = conexao.BuscaDados(consultaSql);
+        }
+
+        private void btnRecarregar_Click(object sender, EventArgs e)
+        {
+            clsConexao conexao = new clsConexao();
+
+            string consultaSql = "SELECT NOME,CPF,NOME_ARQUIVO AS ARQ, USUARIO_IMP AS [IMPORTADO POR] FROM GERAL;";
+
+            grdGeral.DataSource = conexao.BuscaDados(consultaSql);
+        }
+
+
+        
+
+        private void grdGeral_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nomeCli;
+            string cpfCli;
+            string nomeArq;
+            string importadoPor;
+
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Obtém a linha clicada
+                DataGridViewRow row = grdGeral.Rows[e.RowIndex];
+
+                // Obtém os valores das células da linha clicada
+                nomeCli = row.Cells["NOME"].Value.ToString();
+                cpfCli = row.Cells["CPF"].Value.ToString();
+                nomeArq = row.Cells["ARQ"].Value.ToString();
+                importadoPor = row.Cells["IMPORTADO POR"].Value.ToString();
+
+                txtNome.Text = nomeCli;
+
+                // importa tabela menor
+                clsConexao conexao = new clsConexao();
+
+                string consultaSql = $"SELECT CONTRATO,PRODUTO,VALOR FROM GERAL WHERE NOME = '{nomeCli}' AND CPF = '{cpfCli}';";
+
+                grdCliente.DataSource = conexao.BuscaDados(consultaSql);
+
+                // coloca o valor da soma dos contratos do cliente
+                decimal somaD = conexao.PegarSoma(nomeCli, cpfCli);
+                txtSoma.Text = somaD.ToString("0.00");
+
+                int diasDif = conexao.PegarDifDias(nomeCli, cpfCli);
+                txtDiasDif.Text = diasDif.ToString();
+
+            }
+
+
+
+
         }
     }
 }

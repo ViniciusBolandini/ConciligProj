@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
 
 namespace ProjetoConci
 {
@@ -218,15 +219,18 @@ namespace ProjetoConci
         }
 
         // Método para importar tabela
-        public bool ImportarTabela(string caminho)
+        public bool ImportarTabela(string caminho, string nomeDoUsuario)
         {
+
+            string nomeArquivo = Path.GetFileName(caminho);
+
             bool result = false;
 
             AbrirConexao();
 
             // comando Sql
             string consultaSql = $"BULK INSERT IMPORT FROM '{caminho}' WITH (FIELDTERMINATOR = ';',FIRSTROW = 2,CODEPAGE = 'ACP');" 
-                + $"INSERT INTO GERAL (NOME,CPF,CONTRATO,PRODUTO,VENCIMENTO,VALOR,NOME_ARQUIVO,USUARIO_IMP) SELECT NOME, CPF, CAST(CONTRATO AS INT), PRODUTO, CONVERT(DATE,VENCIMENTO,103), CAST(REPLACE(VALOR,',','.') AS MONEY), 'ARQ', 1 FROM IMPORT;" 
+                + $"INSERT INTO GERAL (NOME,CPF,CONTRATO,PRODUTO,VENCIMENTO,VALOR,NOME_ARQUIVO,USUARIO_IMP) SELECT NOME, CPF, CAST(CONTRATO AS INT), PRODUTO, CONVERT(DATE,VENCIMENTO,103), CAST(REPLACE(VALOR,',','.') AS MONEY), '{nomeArquivo}', '{nomeDoUsuario}'  FROM IMPORT;" 
                 + $"DELETE IMPORT;";
 
             // objeto que recebe o comando e a conexao
@@ -272,6 +276,103 @@ namespace ProjetoConci
 
             return dataTable;
             
+        }
+
+        // Método para pegar a soma dos contratos do cliente
+        public decimal PegarSoma(string nome, string cpf)
+        {
+            AbrirConexao();
+
+            // recebe o comando Sql
+            string consultaSql = $"SELECT SUM(VALOR) FROM GERAL WHERE NOME = '{nome}' AND CPF = '{cpf}';";
+
+            // objeto que recebe o comando e a conexao
+            SqlCommand comando = new SqlCommand(consultaSql, conexao);
+
+            try
+            {
+                // Classe (DataReader) recebe os dados, ExecuteReader aplica o comando no Sql
+                SqlDataReader leitor = comando.ExecuteReader();
+
+                // Verifica se há linhas retornadas pela consulta
+                if (leitor.HasRows)
+                {
+                    // Itera sobre as linhas retornadas
+                    while (leitor.Read())
+                    {
+                        // Recupera os valores das colunas pelo nome ou índice
+                        decimal soma = leitor.GetDecimal(0);
+
+
+                        // Faça o que desejar com os dados recuperados, como exibir na tela
+                        Console.WriteLine($"ID: {soma}");
+                        return soma;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Não foram encontrados registros.");
+                }
+
+                // Fecha o leitor de dados
+                leitor.Close();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Erro ao executar consulta: " + ex.Message);
+            }
+            finally
+            {
+                FecharConexao(); // Fecha a conexão
+            }
+            return -1;
+        }
+
+
+        // Método para pegar a diferença entre os dias dos contratos do cliente
+        public int PegarDifDias(string nome, string cpf)
+        {
+            AbrirConexao();
+
+            // recebe o comando Sql
+            string consultaSql = $"SELECT MAX(DATEDIFF(day, VENCIMENTO, GETDATE())) FROM GERAL WHERE NOME = '{nome}' AND CPF = '{cpf}';";
+
+            // objeto que recebe o comando e a conexao
+            SqlCommand comando = new SqlCommand(consultaSql, conexao);
+
+            try
+            {
+                // Classe (DataReader) recebe os dados, ExecuteReader aplica o comando no Sql
+                SqlDataReader leitor = comando.ExecuteReader();
+
+                // Verifica se há linhas retornadas pela consulta
+                if (leitor.HasRows)
+                {
+                    // Itera sobre as linhas retornadas
+                    while (leitor.Read())
+                    {
+                        // Recupera os valores das colunas pelo nome ou índice
+                        int diasDif = leitor.GetInt32(0);
+                        return diasDif;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Não foram encontrados registros.");
+                }
+
+                // Fecha o leitor de dados
+                leitor.Close();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Erro ao executar consulta: " + ex.Message);
+            }
+            finally
+            {
+                FecharConexao(); // Fecha a conexão
+            }
+            return -1;
         }
 
     }
