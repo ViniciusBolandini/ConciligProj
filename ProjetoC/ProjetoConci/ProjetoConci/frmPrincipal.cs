@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,10 @@ namespace ProjetoConci
 
             txtCaminho.Text = "";
 
+            consultaSql = "SELECT DISTINCT NOME_ARQUIVO,USUARIO_IMP AS [IMPORTADO POR] FROM GERAL;";
+
+            grdArquivos.DataSource = conexao.BuscaDados(consultaSql);
+
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -118,7 +123,7 @@ namespace ProjetoConci
 
                 // coloca o valor da soma dos contratos do cliente
                 decimal somaD = conexao.PegarSoma(nomeCli, cpfCli);
-                txtSoma.Text = "R$ " + somaD.ToString("0.00");
+                txtSoma.Text = "R$ " + somaD.ToString("N2", CultureInfo.GetCultureInfo("pt-BR"));
 
                 int diasDif = conexao.PegarDifDias(nomeCli, cpfCli);
                 txtDiasDif.Text = diasDif.ToString() + " dias";

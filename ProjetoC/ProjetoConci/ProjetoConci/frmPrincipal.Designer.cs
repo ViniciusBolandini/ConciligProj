@@ -192,7 +192,7 @@
             this.grdArquivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdArquivos.Location = new System.Drawing.Point(658, 539);
             this.grdArquivos.Name = "grdArquivos";
-            this.grdArquivos.Size = new System.Drawing.Size(520, 150);
+            this.grdArquivos.Size = new System.Drawing.Size(346, 150);
             this.grdArquivos.TabIndex = 12;
             // 
             // label1

@@ -89,54 +89,7 @@ namespace ProjetoConci
             return result;
         }
 
-        // Método para fazer Querys
-        public void ExecuteQuery(string sql)
-        {
-            AbrirConexao();
-
-            // recebe o comando Sql
-            string consultaSql = sql;
-
-            // objeto que recebe o comando e a conexao
-            SqlCommand comando = new SqlCommand(consultaSql, conexao);
-
-            try
-            {
-                // Classe (DataReader) recebe os dados, ExecuteReader aplica o comando no Sql
-                SqlDataReader leitor = comando.ExecuteReader();
-
-                // Verifica se há linhas retornadas pela consulta
-                if (leitor.HasRows)
-                {
-                    // Itera sobre as linhas retornadas
-                    while (leitor.Read())
-                    {
-                        // Recupera os valores das colunas pelo nome ou índice
-                        int id = leitor.GetInt32(0); // Exemplo: obtendo o valor da primeira coluna como inteiro
-                        string nome = leitor.GetString(1); // Exemplo: obtendo o valor da segunda coluna como string
-
-                        // Faça o que desejar com os dados recuperados, como exibir na tela
-                        Console.WriteLine($"ID: {id}, Nome: {nome}");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Não foram encontrados registros.");
-                }
-
-                // Fecha o leitor de dados
-                leitor.Close();
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("Erro ao executar consulta: " + ex.Message);
-            }
-            finally
-            {
-                FecharConexao(); // Fecha a conexão
-            }
-        }
-
+   
         // Método para cadastrar usuario
         public bool Cadastrar(string username, string password)
         {
