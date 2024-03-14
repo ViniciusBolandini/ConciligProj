@@ -187,15 +187,12 @@ namespace ProjetoConci
                 // Verifica se há linhas retornadas pela consulta
                 if (leitor.HasRows)
                 {
-                    // Itera sobre as linhas retornadas
+                    // Percorrer as linhas retornadas
                     while (leitor.Read())
                     {
                         // Recupera os valores das colunas pelo nome ou índice
-                        int id = leitor.GetInt32(0); // Exemplo: obtendo o valor da primeira coluna como inteiro
-                        
+                        int id = leitor.GetInt32(0); // recebe o valor da primeira coluna
 
-                        // Faça o que desejar com os dados recuperados, como exibir na tela
-                        Console.WriteLine($"ID: {id}");
                         return id;
                     }
                 }
@@ -297,15 +294,12 @@ namespace ProjetoConci
                 // Verifica se há linhas retornadas pela consulta
                 if (leitor.HasRows)
                 {
-                    // Itera sobre as linhas retornadas
+                    // Percorre sobre as linhas retornadas
                     while (leitor.Read())
                     {
                         // Recupera os valores das colunas pelo nome ou índice
                         decimal soma = leitor.GetDecimal(0);
 
-
-                        // Faça o que desejar com os dados recuperados, como exibir na tela
-                        Console.WriteLine($"ID: {soma}");
                         return soma;
                     }
                 }
@@ -348,7 +342,7 @@ namespace ProjetoConci
                 // Verifica se há linhas retornadas pela consulta
                 if (leitor.HasRows)
                 {
-                    // Itera sobre as linhas retornadas
+                    // Percorre sobre as linhas retornadas
                     while (leitor.Read())
                     {
                         // Recupera os valores das colunas pelo nome ou índice
@@ -373,6 +367,45 @@ namespace ProjetoConci
                 FecharConexao(); // Fecha a conexão
             }
             return -1;
+        }
+
+        // Método para verificar se o usuario ja existe
+        public bool ChecarCadastro(string username)
+        {
+            bool result = false;
+
+            AbrirConexao();
+
+            // comando Sql
+            string consultaSql = $"SELECT * FROM USUARIO WHERE NOME = '{username}'";
+
+            // objeto que recebe o comando e a conexao
+            SqlCommand comando = new SqlCommand(consultaSql, conexao);
+
+            try
+            {
+
+                // Classe (DataReader) recebe os dados, ExecuteReader aplica o comando no Sql
+                SqlDataReader leitor = comando.ExecuteReader();
+
+                // Verifica se há linhas retornadas pela consulta
+                if (leitor.HasRows)
+                {
+                    result = true;
+                }
+
+                // Fecha o leitor de dados
+                leitor.Close();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Erro ao executar consulta: " + ex.Message);
+            }
+            finally
+            {
+                FecharConexao();
+            }
+            return result;
         }
 
     }

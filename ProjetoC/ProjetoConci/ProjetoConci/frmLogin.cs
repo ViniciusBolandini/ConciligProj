@@ -32,8 +32,8 @@ namespace ProjetoConci
 
                 frmPrincipal frmPrincipal = new frmPrincipal(nomeUsuario);
 
-                frmPrincipal.ShowDialog();
-                this.Close();
+                frmPrincipal.Show();
+                this.Hide();
             }
             else
             {
@@ -41,19 +41,6 @@ namespace ProjetoConci
             }
         }
 
-
-        //evento de click no botao de mostrar a senha
-        private void chkMostraSenha_Click(object sender, EventArgs e)
-        {
-            if (chkMostraSenha.Checked)
-            {
-                txtSenha.PasswordChar = '\0';
-            }
-            else
-            {
-                txtSenha.PasswordChar = '*';
-            }
-        }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -67,5 +54,6 @@ namespace ProjetoConci
             frmCadastro frmCadastro = new frmCadastro();
             frmCadastro.ShowDialog();
         }
+
     }
 }

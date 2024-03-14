@@ -56,6 +56,12 @@ namespace ProjetoConci
                 conexao.ImportarTabela(txtCaminho.Text, nomeDoUsuario);
             }
 
+            string consultaSql = "SELECT NOME,CPF,NOME_ARQUIVO AS ARQ, USUARIO_IMP AS [IMPORTADO POR] FROM GERAL;";
+
+            grdGeral.DataSource = conexao.BuscaDados(consultaSql);
+
+            txtCaminho.Text = "";
+
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -65,6 +71,10 @@ namespace ProjetoConci
             string consultaSql = "SELECT NOME,CPF,NOME_ARQUIVO AS ARQ, USUARIO_IMP AS [IMPORTADO POR] FROM GERAL;";
 
             grdGeral.DataSource = conexao.BuscaDados(consultaSql);
+
+            consultaSql = "SELECT DISTINCT NOME_ARQUIVO,USUARIO_IMP AS [IMPORTADO POR] FROM GERAL;";
+
+            grdArquivos.DataSource = conexao.BuscaDados(consultaSql);
         }
 
         private void btnRecarregar_Click(object sender, EventArgs e)
@@ -108,16 +118,18 @@ namespace ProjetoConci
 
                 // coloca o valor da soma dos contratos do cliente
                 decimal somaD = conexao.PegarSoma(nomeCli, cpfCli);
-                txtSoma.Text = somaD.ToString("0.00");
+                txtSoma.Text = "R$ " + somaD.ToString("0.00");
 
                 int diasDif = conexao.PegarDifDias(nomeCli, cpfCli);
-                txtDiasDif.Text = diasDif.ToString();
+                txtDiasDif.Text = diasDif.ToString() + " dias";
 
             }
 
+        }
 
-
-
+        private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

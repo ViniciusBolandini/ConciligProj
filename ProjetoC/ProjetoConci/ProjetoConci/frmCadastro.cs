@@ -24,9 +24,13 @@ namespace ProjetoConci
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtSenha.Text == txtConfirmaSenha.Text)
+            clsConexao conexao = new clsConexao();
+
+            bool checa = conexao.ChecarCadastro(txtNome.Text);
+
+            if (txtSenha.Text == txtConfirmaSenha.Text && !string.IsNullOrWhiteSpace(txtNome.Text) && !checa)
             {
-                clsConexao conexao = new clsConexao();
+                
                 bool resulte = conexao.Cadastrar(txtNome.Text, txtSenha.Text);
                 if (resulte)
                 {
@@ -38,10 +42,15 @@ namespace ProjetoConci
                     MessageBox.Show("Nao foi possivel cadastrar");
                 }
             }
-            else
+            else if(checa)
             {
-                MessageBox.Show("Senhas divergentes");
+                MessageBox.Show("Nome de usuário não disponíve");
             }
+            else 
+            { 
+                MessageBox.Show("Senhas divergentes ou campo não preenchido"); 
+            }
+            
         }
     }
 }
