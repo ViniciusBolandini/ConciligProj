@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\projetoconci\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\projetoconci\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|c:\\users\\vinicius\\documents\\projconcilig\\conciligproj\\projetoc\\projetoconci\\projetoconci\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\projetoconci\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DB7F577-4085-4A9E-8515-BB4EA90E5F1C}|ProjetoConci\\ProjetoConci.csproj|solutionrelative:projetoconci\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,30 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "ProjetoConci\\frmPrincipal.cs",
               "ToolTip": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\frmPrincipal.cs",
               "RelativeToolTip": "ProjetoConci\\frmPrincipal.cs",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAuwJwAAAA6AAAA",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAuwIkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-15T14:08:24.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "clsConexao.cs",
               "DocumentMoniker": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\clsConexao.cs",
               "RelativeDocumentMoniker": "ProjetoConci\\clsConexao.cs",
               "ToolTip": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\clsConexao.cs",
               "RelativeToolTip": "ProjetoConci\\clsConexao.cs",
-              "ViewState": "AQIAAOYAAAAAAAAAAAAAwPAAAABSAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAcwHwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-15T13:23:19.089Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "ToolTip": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\frmPrincipal.cs [Design]",
               "RelativeToolTip": "ProjetoConci\\frmPrincipal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T12:10:16.309Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-15T12:10:16.309Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "ProjetoConci\\frmLogin.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAgwB0AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T12:02:52.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-15T12:02:52.826Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "ToolTip": "C:\\Users\\vinicius\\Documents\\ProjConcilig\\ConciligProj\\ProjetoC\\ProjetoConci\\ProjetoConci\\frmLogin.cs [Design]",
               "RelativeToolTip": "ProjetoConci\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T19:39:01.212Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-14T19:39:01.212Z"
             }
           ]
         }
