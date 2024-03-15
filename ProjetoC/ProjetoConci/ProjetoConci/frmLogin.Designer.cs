@@ -50,10 +50,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(747, 545);
+            this.btnLogin.Location = new System.Drawing.Point(820, 481);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(168, 48);
+            this.btnLogin.Size = new System.Drawing.Size(235, 48);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -64,10 +64,10 @@
             this.btnCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(73)))), ((int)(((byte)(133)))));
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.Location = new System.Drawing.Point(943, 545);
+            this.btnCadastro.Location = new System.Drawing.Point(820, 550);
             this.btnCadastro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(168, 48);
+            this.btnCadastro.Size = new System.Drawing.Size(235, 48);
             this.btnCadastro.TabIndex = 1;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.UseVisualStyleBackColor = false;

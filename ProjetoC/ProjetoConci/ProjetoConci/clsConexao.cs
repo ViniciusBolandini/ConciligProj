@@ -11,8 +11,8 @@ namespace ProjetoConci
 {
     public class clsConexao
     {
-        private string stringConexao;
-        private SqlConnection conexao;
+        private string stringConexao; // string que vai receber os dos dados de conexão do banco SQL
+        private SqlConnection conexao;// vai receber nossa instância da classe SqlConnection
 
         //Construtor
         public clsConexao()
@@ -104,7 +104,7 @@ namespace ProjetoConci
             SqlCommand comando = new SqlCommand(consultaSql, conexao);
 
 
-            int linhasAfetadas = comando.ExecuteNonQuery();
+            int linhasAfetadas = comando.ExecuteNonQuery();// comando usado para instrução que não retorna dados
 
             // Verificaçao
             if (linhasAfetadas > 0)
@@ -121,58 +121,12 @@ namespace ProjetoConci
             return result;
         }
 
-        // Método para pegar o ID do usuario ao logar
-        public int PegarID(string username, string password)
-        {
-            AbrirConexao();
-
-            // recebe o comando Sql
-            string consultaSql = $"SELECT USUARIOID FROM USUARIO WHERE SENHA = '{password}' AND NOME = '{username}'";
-
-            // objeto que recebe o comando e a conexao
-            SqlCommand comando = new SqlCommand(consultaSql, conexao);
-
-            try
-            {
-                // Classe (DataReader) recebe os dados, ExecuteReader aplica o comando no Sql
-                SqlDataReader leitor = comando.ExecuteReader();
-
-                // Verifica se há linhas retornadas pela consulta
-                if (leitor.HasRows)
-                {
-                    // Percorrer as linhas retornadas
-                    while (leitor.Read())
-                    {
-                        // Recupera os valores das colunas pelo nome ou índice
-                        int id = leitor.GetInt32(0); // recebe o valor da primeira coluna
-
-                        return id;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Não foram encontrados registros.");
-                }
-
-                // Fecha o leitor de dados
-                leitor.Close();
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("Erro ao executar consulta: " + ex.Message);
-            }
-            finally
-            {
-                FecharConexao(); // Fecha a conexão
-            }
-            return -1;
-        }
-
+        
         // Método para importar tabela
         public bool ImportarTabela(string caminho, string nomeDoUsuario)
         {
 
-            string nomeArquivo = Path.GetFileName(caminho);
+            string nomeArquivo = Path.GetFileName(caminho);//  Obtêm o Nome do arquivo do caminho completo
 
             bool result = false;
 
@@ -187,7 +141,7 @@ namespace ProjetoConci
             SqlCommand comando = new SqlCommand(consultaSql, conexao);
 
 
-            int linhasAfetadas = comando.ExecuteNonQuery();
+            int linhasAfetadas = comando.ExecuteNonQuery();// comando usado para instrução que não retorna dados
 
             // Verificaçao
             if (linhasAfetadas > 0)
@@ -204,9 +158,10 @@ namespace ProjetoConci
             return result;
         }
 
+        //Método para buscar os dados que vão para os dataGridView
         public DataTable BuscaDados(string sql)
         {
-            var dataTable = new DataTable();
+            var dataTable = new DataTable(); // Instância de uma classe DataTable
 
             AbrirConexao();
 
@@ -214,11 +169,12 @@ namespace ProjetoConci
             // recebe o comando Sql
             string consultaSql = sql;
 
-            // objeto que recebe o comando e a conexao
+            // objeto que recebe o comando e a conexão
             SqlCommand comando = new SqlCommand(consultaSql, conexao);
 
-            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
 
+            // faz a passagem e a adaptação dos dados obtidos para o formato que o DataTable aceita
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
             adaptador.Fill(dataTable);
 
 

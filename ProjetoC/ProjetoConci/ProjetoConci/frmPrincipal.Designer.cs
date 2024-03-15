@@ -94,8 +94,10 @@
             this.grdGeral.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grdGeral.Name = "grdGeral";
             this.grdGeral.ReadOnly = true;
+            this.grdGeral.RowHeadersVisible = false;
             this.grdGeral.Size = new System.Drawing.Size(633, 519);
             this.grdGeral.TabIndex = 3;
+            this.grdGeral.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdGeral_CellClick);
             this.grdGeral.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdGeral_CellDoubleClick);
             // 
             // btnRecarregar
@@ -132,6 +134,7 @@
             this.grdCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grdCliente.Name = "grdCliente";
             this.grdCliente.ReadOnly = true;
+            this.grdCliente.RowHeadersVisible = false;
             this.grdCliente.Size = new System.Drawing.Size(522, 242);
             this.grdCliente.TabIndex = 6;
             // 
@@ -192,6 +195,7 @@
             this.grdArquivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdArquivos.Location = new System.Drawing.Point(658, 539);
             this.grdArquivos.Name = "grdArquivos";
+            this.grdArquivos.RowHeadersVisible = false;
             this.grdArquivos.Size = new System.Drawing.Size(346, 150);
             this.grdArquivos.TabIndex = 12;
             // 

@@ -27,7 +27,7 @@ namespace ProjetoConci
             bool resulte = conexao.Login(txtNome.Text, txtSenha.Text);
             if (resulte)
             {
-                int usuarioId = conexao.PegarID(txtNome.Text, txtSenha.Text);
+                
                 string nomeUsuario = txtNome.Text;
 
                 frmPrincipal frmPrincipal = new frmPrincipal(nomeUsuario);
@@ -37,7 +37,7 @@ namespace ProjetoConci
             }
             else
             {
-                MessageBox.Show("usuario ou senha incorreta");
+                MessageBox.Show("Nome de usuário ou senha incorreto.");
             }
         }
 
@@ -48,7 +48,7 @@ namespace ProjetoConci
         }
 
         
-        //evento de click no botao de cadastrar 
+        //Evento de click no botão de cadastrar 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             frmCadastro frmCadastro = new frmCadastro();

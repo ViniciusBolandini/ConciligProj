@@ -17,21 +17,25 @@ namespace ProjetoConci
             InitializeComponent();
         }
 
+        //Método para voltar a tela de login
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+        //Método para Cadastrar o usuário
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            clsConexao conexao = new clsConexao();
+            clsConexao conexao = new clsConexao(); 
 
             bool checa = conexao.ChecarCadastro(txtNome.Text);
 
+            // Verificando se as senhas sao distintas e se o usuário não existe
             if (txtSenha.Text == txtConfirmaSenha.Text && !string.IsNullOrWhiteSpace(txtNome.Text) && !checa)
             {
                 
-                bool resulte = conexao.Cadastrar(txtNome.Text, txtSenha.Text);
+                bool resulte = conexao.Cadastrar(txtNome.Text, txtSenha.Text); //Cadastra o usuário
                 if (resulte)
                 {
 
@@ -39,12 +43,12 @@ namespace ProjetoConci
                 }
                 else
                 {
-                    MessageBox.Show("Nao foi possivel cadastrar");
+                    MessageBox.Show("Não foi possível cadastrar");
                 }
             }
             else if(checa)
             {
-                MessageBox.Show("Nome de usuário não disponíve");
+                MessageBox.Show("Nome de usuário não disponível");
             }
             else 
             { 
